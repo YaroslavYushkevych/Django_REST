@@ -4,5 +4,5 @@ cd drfsite
 Запустити сервер
 python manage.py runserver
 
-Міграція БД
+
 
