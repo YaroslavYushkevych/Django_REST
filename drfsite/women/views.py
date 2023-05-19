@@ -14,10 +14,22 @@ class WomenAPIList(generics.ListCreateAPIView):
     queryset = Women.objects.all()
     serializer_class = WomenSerializer
 
+class WomenAPIUpdate(generics.UpdateAPIView):
+    queryset = Women.objects.all()
+    serializer_class = WomenSerializer
+
+
+class WomenAPIDetailView(generics.RetrieveUpdateDestroyAPIView):
+    queryset = Women.objects.all()
+    serializer_class = WomenSerializer
 
 
 
 
+
+
+
+"""
 class WomenAPIView(APIView):
     def get(self, request):
         w = Women.objects.all()
@@ -60,7 +72,7 @@ class WomenAPIView(APIView):
         serializer.save()
 
         return Response({"post": "delete post " + str(pk)})
-
+"""
 
 """
 class WomenAPIView(generics.ListAPIView):
