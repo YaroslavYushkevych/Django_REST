@@ -8,11 +8,14 @@ from rest_framework.response import Response
 from rest_framework.views import APIView
 
 
-"""
-class WomenAPIView(generics.ListAPIView):
+
+
+class WomenAPIList(generics.ListCreateAPIView):
     queryset = Women.objects.all()
     serializer_class = WomenSerializer
-"""
+
+
+
 
 
 class WomenAPIView(APIView):
@@ -58,3 +61,9 @@ class WomenAPIView(APIView):
 
         return Response({"post": "delete post " + str(pk)})
 
+
+"""
+class WomenAPIView(generics.ListAPIView):
+    queryset = Women.objects.all()
+    serializer_class = WomenSerializer
+"""

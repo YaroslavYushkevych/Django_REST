@@ -6,6 +6,24 @@ from rest_framework.renderers import JSONRenderer
 from .models import Women
 
 
+class WomenSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = Women
+        #fields = "__all__"
+        fields = ("title", "content", "cat")
+
+
+
+
+
+
+
+
+
+
+
+"""
+Звичайний серілізатор, написаний на базовому класі
 class WomenSerializer(serializers.Serializer):
     title = serializers.CharField(max_length=255)
     content = serializers.CharField()
@@ -32,7 +50,7 @@ class WomenSerializer(serializers.Serializer):
     def delete(self, validated_data):
         return Women.objects.delete(**validated_data)
 
-
+"""
 
 
 
