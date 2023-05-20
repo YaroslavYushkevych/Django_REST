@@ -5,4 +5,9 @@ cd drfsite
 python manage.py runserver
 
 
+Підготувати модель до міграції
+python manage.py makemigrations
+
+Провести міграцію моделі
+python manage.py migrate
 
