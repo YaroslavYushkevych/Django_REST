@@ -17,11 +17,15 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path, include
 
+from women.routers import MyCustomRouter
 from women.views import *
 from rest_framework import routers
 
-router = routers.SimpleRouter()
-router.register(r'women', WomenViewSet)
+router = routers.DefaultRouter()
+#router = MyCustomRouter()
+router.register(r'women', WomenViewSet, basename='women')
+print(router.urls)
+
 
 
 urlpatterns = [
