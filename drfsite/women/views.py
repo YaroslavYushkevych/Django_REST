@@ -22,7 +22,7 @@ class WomenAPIList(generics.ListCreateAPIView):
 class WomenAPIUpdate(generics.RetrieveUpdateAPIView):
     queryset = Women.objects.all()
     serializer_class = WomenSerializer
-    authentication_classes = (TokenAuthentication, )
+    #authentication_classes = (TokenAuthentication, )
     permission_classes = (IsAuthenticatedOrReadOnly, )
     #permission_classes = (IsOwnerOrReadOnly, )
 
