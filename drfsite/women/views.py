@@ -28,9 +28,10 @@ class WomenAPIUpdate(generics.RetrieveUpdateAPIView):
     queryset = Women.objects.all()
     serializer_class = WomenSerializer
     #authentication_classes = (TokenAuthentication, )
+    # permission_classes = (IsOwnerOrReadOnly, )
     permission_classes = (IsAuthenticatedOrReadOnly, )
     pagination_class = WomenAPIListPagination
-    #permission_classes = (IsOwnerOrReadOnly, )
+
 
 
 class WomenAPIDestroy(generics.RetrieveDestroyAPIView):
